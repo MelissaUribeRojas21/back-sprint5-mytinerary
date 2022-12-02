@@ -7,5 +7,4 @@ const passport = require('../config/passport')
 router.get('/', read);
 router.post("/", passport.authenticate("jwt", { session: false }), validator(schema), create);
 
-
 module.exports = router;
